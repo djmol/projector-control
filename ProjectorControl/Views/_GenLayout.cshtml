@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/Styles.css" rel="stylesheet" type="text/css" />
+    <link media="screen" href="http://openfontlibrary.org/face/genome"rel="stylesheet"  type="text/css"/>
+    <title>@ViewBag.Title</title>
+    <link rel="icon" href="~/Content/Images/favicon.ico" type="image/x-icon" />
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.10.2.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")"></script>
+</head>
+<body>
+    <div id="headerback">
+        <div id="header">
+            <div id="title">
+                <h1>PCTI Projector Control</h1>
+            </div>
+        </div>
+    </div>
+    <div id="shadowblocker">
+        <div id="main">
+            <h2>@ViewBag.Title</h2>
+            @RenderBody()
+        </div>
+    </div>
+    <div id="footer">
+        <div id="footernav">
+            <h2><a href="http://www.pcti.tec.nj.us">PCTI Home</a></h2>
+        </div>
+    </div>
+</body>
+</html>

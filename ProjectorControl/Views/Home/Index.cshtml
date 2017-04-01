@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Welcome!";
+    Layout = "~/Views/_GenLayout.cshtml";
+}
+
+@ViewBag.CurrentTime<br />
+<strong>@ViewBag.userAuth on @ViewBag.pcName</strong><br />
+@if ((String)ViewBag.Destination == "Control")
+{
+    <p>Please select a projector:</p>
+
+    using (Html.BeginForm("Control", "Home"))
+    {
+
+        <fieldset>
+
+            Device: @Html.DropDownList("deviceIp")
+
+            <br/> <br/>
+
+                <input type="submit" value="Submit" />
+
+        </fieldset>
+
+        <p class="notice">Please note that a projector must be switched on and connected to the network for it to appear in the device list.</p>
+
+    } 
+}
+else if ((String)ViewBag.Destination == "Index")
+{
+    @:<strong>Insufficient privileges!<br/><br/></strong>
+    @Html.ActionLink("Refresh", (String)ViewBag.Destination)
+}
+else
+{
+    @Html.ActionLink("Authorization Error", (String)ViewBag.Destination)
+}

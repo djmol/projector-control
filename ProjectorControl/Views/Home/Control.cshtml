@@ -1,0 +1,243 @@
+﻿@{
+    ViewBag.Title = "Control (" + @ViewBag.deviceIp + ")";
+    Layout = "~/Views/_GenLayout.cshtml";
+}
+@using System.Web.Mvc.Ajax
+<table>
+<tr>
+    <td id="onButton" class="input">
+            @Ajax.ActionLink(
+        "On",
+        "SendRemoteCommand",
+        new
+        {
+            commandId = "on"
+        },
+        new AjaxOptions
+        {
+            HttpMethod = "POST"
+        })
+    </td>
+    <td>
+        <img id="logo" src="~/Content/Images/pcti_logo.png"/>
+    </td>
+    <td id="offButton">
+        @Ajax.ActionLink(
+        "Off",
+        "SendRemoteCommand",
+        new
+        {
+            commandId = "off"
+        },
+        new AjaxOptions
+        {
+            HttpMethod = "POST"
+        })
+    </td>
+</tr>
+<tr>
+    <td class="darkButton">
+        @Ajax.ActionLink(
+        "Source",
+        "SendRemoteCommand",
+        new
+        {
+            commandId = "source"
+        },
+        new AjaxOptions
+        {
+            HttpMethod = "POST"
+        })
+    </td>
+    <td class ="darkButton">
+        @Ajax.ActionLink(
+        "Comp. 1",
+        "SendRemoteCommand",
+        new
+        {
+            commandId = "comp1Input"
+        },
+        new AjaxOptions
+        {
+            HttpMethod = "POST"
+        })
+    </td>
+    <td class="darkButton">
+        @Ajax.ActionLink(
+        "Comp. 2",
+        "SendRemoteCommand",
+        new
+        {
+            commandId = "comp2Input"
+        },
+        new AjaxOptions
+        {
+            HttpMethod = "POST"
+        })
+    </td>
+</tr>
+<tr>
+    <td class="volume">
+        @Ajax.ActionLink(
+        "Vol. Down",
+        "SendRemoteCommand",
+        new
+        {
+            commandId = "volDown"
+        },
+        new AjaxOptions
+        {
+            HttpMethod = "POST"
+        })
+    </td>
+    <td class="darkButton">
+        @Ajax.ActionLink(
+        "Mute",
+        "SendRemoteCommand",
+        new
+        {
+            commandId = "avMute"
+        },
+        new AjaxOptions
+        {
+            HttpMethod = "POST"
+        })
+    </td>
+    <td class="volume">
+        @Ajax.ActionLink(
+        "Vol. Up",
+        "SendRemoteCommand",
+        new
+        {
+            commandId = "volUp"
+        },
+        new AjaxOptions
+        {
+            HttpMethod = "POST"
+        })
+    </td>
+</tr>
+<tr>
+    <td class="darkButton">
+        @Ajax.ActionLink(
+        "Menu",
+        "SendRemoteCommand",
+        new
+        {
+            commandId = "menu"
+        },
+        new AjaxOptions
+        {
+            HttpMethod = "POST"
+        })
+    </td>
+    <td class="directional">
+        @Ajax.ActionLink(
+        "↑",
+        "SendRemoteCommand",
+        new
+        {
+            commandId = "up"
+        },
+        new AjaxOptions
+        {
+            HttpMethod = "POST"
+        })
+    </td>
+    <td class="darkButton">
+        @Ajax.ActionLink(
+        "Exit",
+        "SendRemoteCommand",
+        new
+        {
+            commandId = "exit"
+        },
+        new AjaxOptions
+        {
+            HttpMethod = "POST"
+        })
+    </td>
+</tr>
+<tr>
+    <td class="directional">
+        @Ajax.ActionLink(
+        "←",
+        "SendRemoteCommand",
+        new
+        {
+            commandId = "left"
+        },
+        new AjaxOptions
+        {
+            HttpMethod = "POST"
+        })
+    </td>
+    <td class="directional">
+        @Ajax.ActionLink(
+        "Enter",
+        "SendRemoteCommand",
+        new
+        {
+            commandId = "enter"
+        },
+        new AjaxOptions
+        {
+            HttpMethod = "POST"
+        })
+    </td>
+    <td class="directional">
+        @Ajax.ActionLink(
+        "→",
+        "SendRemoteCommand",
+        new
+        {
+            commandId = "right"
+        },
+        new AjaxOptions
+        {
+            HttpMethod = "POST"
+        })
+    </td>
+</tr>
+<tr>
+    <td class="darkButton">
+        @Ajax.ActionLink(
+        "Freeze",
+        "SendRemoteCommand",
+        new
+        {
+            commandId = "freeze"
+        },
+        new AjaxOptions
+        {
+            HttpMethod = "POST"
+        })
+    </td>
+    <td class="directional">
+        @Ajax.ActionLink(
+        "↓",
+        "SendRemoteCommand",
+        new
+        {
+            commandId = "down"
+        },
+        new AjaxOptions
+        {
+            HttpMethod = "POST"
+        })
+    </td>
+    <td class="darkButton">
+        @Ajax.ActionLink(
+        "Picture",
+        "SendRemoteCommand",
+        new
+        {
+            commandId = "picture"
+        },
+        new AjaxOptions
+        {
+            HttpMethod = "POST"
+        })
+    </td>
+</tr>
+</table>
